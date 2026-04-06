@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: finance-backend
+    runtime: docker
+    rootDir: finance-backend
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+    healthCheckPath: /api/auth/login
